@@ -1,17 +1,17 @@
 [
-    {
-        "id": 1,
-        "task": "learn MVC",
-        "status": true 
-    },
-    {
-        "id": 2,
-        "task": "learn Angular",
-        "status": false 
-    },
-    {
-        "id": 3,
-        "task": "learn React",
-        "status": false 
-    }
+   {
+      "id": 1,
+      "task": "learn MVC",
+      "status": true
+   },
+   {
+      "id": 2,
+      "task": "learn Angular",
+      "status": false
+   },
+   {
+      "id": 3,
+      "task": "learn React",
+      "status": false
+   }
 ]

@@ -3,7 +3,7 @@ class ToDo{
     constructor(id,task,status){
         this.id = id;
         this.task = task;
-        this.status = status;
+        this.status = status || false;
     }
     static getTodos(){
         let data = fs.readFileSync('./data1.json', 'utf-8');
@@ -17,6 +17,27 @@ class ToDo{
     static show(){
         let todos = this.getTodos();
         return todos;
+    }
+    static add(todo){
+        let todos = this.getTodos();
+        let id = todos[todos.length - 1].id + 1;
+        let task = todo[0];
+        let temp = new ToDo(id,task);
+        todos.push(temp);
+        // console.log(todos);
+        this.save(todos);
+    }
+    static delete(todo){
+        // console.log(todo);
+        let todos = this.getTodos();
+        let id = Number(todo[0]);
+        let temp = todos.filter(todo=> todo.id !== id);
+        // console.log(temp);
+        this.save(temp);
+    }
+
+    static save(data){
+        fs.writeFileSync('./data1.json', JSON.stringify(data, null, 3), 'utf-8');
     }
 }
 
