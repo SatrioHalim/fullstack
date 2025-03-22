@@ -1,7 +1,7 @@
 [
    {
       "id": 1,
-      "task": "learn MVC",
+      "task": "Learn Fullstack",
       "status": true
    },
    {
@@ -11,7 +11,7 @@
    },
    {
       "id": 3,
-      "task": "learn React",
+      "task": "Learn HTML",
       "status": false
    }
 ]

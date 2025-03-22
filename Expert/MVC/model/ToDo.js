@@ -39,6 +39,19 @@ class ToDo{
     static save(data){
         fs.writeFileSync('./data1.json', JSON.stringify(data, null, 3), 'utf-8');
     }
+    static update(data){
+        let todos = this.getTodos();
+        let id = Number(data[0]);
+        let task = data[1];
+        let temp = todos.map(todo => {
+            if(todo.id === id){
+                todo.task = task;
+            }
+            return todo;
+        });
+        // console.log(temp);
+         this.save(temp);
+    }
 }
 
 module.exports = ToDo;

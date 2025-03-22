@@ -13,7 +13,8 @@ class ToDoController {
         ToDo.add(params);
     }
     static update(params){
-        console.log("Controller update");
+        // console.log("Controller update");
+        ToDo.update(params);
     }
     static delete(params){
         // console.log("Controller delete");
