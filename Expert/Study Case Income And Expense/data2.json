@@ -1,0 +1,26 @@
+{
+   "incomes": [
+      {
+         "name": "Month Salary",
+         "total": 15000000,
+         "category": "Income"
+      },
+      {
+         "name": "Get Jacpot",
+         "total": 5000000,
+         "category": "Income"
+      }
+   ],
+   "expenses": [
+      {
+         "name": "Eat Ichiraku Ramen",
+         "total": 100000,
+         "category": "Expense"
+      },
+      {
+         "name": "Buy New Laptop",
+         "total": 1500000,
+         "category": "Expense"
+      }
+   ]
+}
