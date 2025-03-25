@@ -31,7 +31,6 @@ class Playlist {
     }
     static add(params){
         let playlists = this.getPlaylist();
-        // console.log(params);
         const [name, genre, duration ,playlistName] = params;
         playlists.forEach(playlist => {
             if(playlist.name === playlistName){
@@ -72,7 +71,6 @@ class Playlist {
         playlists.push(new Playlist(id,name));
         this.save(playlists);
         console.log(`Playlist ${name} has been created.`)
-        // console.log(playlists);        
     }
 }
 

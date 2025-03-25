@@ -9,22 +9,23 @@ const params = process.argv.slice(3); // mengambil indeks ke 3 sampai terakhir
 const PlaylistController = require("./Controller/PlaylistController");
 
 switch (command.toLowerCase()) {
+    // Nambahin lagu di suatu playlist
     case "add":
-        // console.log("Command Add");
         PlaylistController.add(params);
         break;
+    // Hapus lagu di suatu playlist
     case "remove":
-        // console.log("Command Remove");
         PlaylistController.remove(params);
         break;
+    // Ngebuat playlist baru
     case "make":
-        // console.log("Command Make");
         PlaylistController.make(params);
         break;
+    // Nunjukkin playlist
     case "show":
-        // console.log("Command Show");
         PlaylistController.show();
         break;
+    // Error handling kalau commandnya salah
     default:
         console.log("Unknown command: " + command + " , Please use valid command!");
         break;
