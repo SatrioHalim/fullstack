@@ -1,0 +1,38 @@
+[
+   {
+      "id": 1,
+      "name": "Favorite music",
+      "songs": [
+         {
+            "id": 1,
+            "name": "Welcome to the jungle",
+            "duration": 180,
+            "genre": "Rock"
+         },
+         {
+            "id": 2,
+            "name": "No lie",
+            "duration": 240,
+            "genre": "Pop"
+         },
+         {
+            "id": 3,
+            "name": "November rain",
+            "duration": 360,
+            "genre": "Rock"
+         }
+      ]
+   },
+   {
+      "id": 2,
+      "name": "Gym Music",
+      "songs": [
+         {
+            "id": 1,
+            "name": "Bad Apple",
+            "duration": 270,
+            "genre": "Pop"
+         }
+      ]
+   }
+]
