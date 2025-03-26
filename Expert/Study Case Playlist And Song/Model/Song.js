@@ -5,7 +5,6 @@ class Song{
         this.duration = duration;
     }
 }
-
 class Pop extends Song{
     constructor(id,name,duration){
         super(id,name,duration);
@@ -18,7 +17,6 @@ class Rock extends Song{
         this.genre = "Rock";
     }
 }
-
 module.exports = {
     Pop, Rock
 }
