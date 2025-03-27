@@ -1,0 +1,11 @@
+id,category,price,isMature
+1,chicken,15000,y
+2,chicken,30000,y
+4,turkey,50000,n
+5,duck,17500,y
+6,quail,7500,y
+7,duck,37500,n
+8,turkey,75000,y
+9,chicken,10000,n
+10,duck,35000,y
+11,chicken,5000,n
