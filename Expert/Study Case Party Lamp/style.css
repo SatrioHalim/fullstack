@@ -1,0 +1,48 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.containerItem{
+    width: 30%;
+}
+.random{
+    width: 100%;
+    margin-bottom: 16px;
+}
+.colorButton{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.random button{
+    width: 100%;
+    padding: 8px 16px;
+    background-color: black;
+    color: white;
+}
+.colorButtonItem{
+    width: 25%;
+}
+.colorButtonItem button{
+    width: 100%;
+    padding: 8px 16px;
+    color: white;
+}
+#btnRed{
+    background-color: crimson;
+}
+#btnGreen{
+    background-color: green;
+}
+#btnBlue{
+    background-color: cadetblue;
+}
