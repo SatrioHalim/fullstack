@@ -45,5 +45,10 @@ body{
 #btnSubmit{
     padding: 8px 16px;
     border: none;
+    transition: all ease-in-out 0.1s;
+}
+#btnSubmit:hover{
+    background-color: darkgrey;
+    color: white;
     cursor: pointer;
 }
