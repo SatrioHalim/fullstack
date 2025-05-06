@@ -19,8 +19,31 @@ function submitHandler(){
         nama : barangValue,
         harga : +hargaValue // + buat convert ke integer
     }
+    document.getElementById('namaCart').innerHTML = namaValue;
     carts.push(tempObj);
-    console.log(carts);
+    getCarts();
+    // console.log(carts);
 }
 
+function getCarts(){
+    let tBody = document.getElementById('tBody');
+    tBody.innerHTML = '';
+    carts.forEach(cart => {
+        tBody.innerHTML += `<tr>
+            <td>${cart.id}</td>
+            <td>${cart.nama}</td>
+            <td>${cart.harga}</td>
+        </tr>`
+    })
+}
 BtnSubmit.addEventListener('click', submitHandler);
+
+let BtnPrint = document.getElementById('btnPrint');
+
+function printHandler(){
+    // console.log("Cetak");
+    document.querySelector('.form-box').style.display = 'none';
+    BtnPrint.style.display = 'none';    
+    window.print();
+}
+BtnPrint.addEventListener('click', printHandler);

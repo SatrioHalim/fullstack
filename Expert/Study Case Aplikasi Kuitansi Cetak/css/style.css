@@ -45,9 +45,48 @@ body{
 #btnSubmit{
     padding: 8px 16px;
     border: none;
-    transition: all ease-in-out 0.1s;
+    transition: all ease-in-out 0.2s;
 }
 #btnSubmit:hover{
+    background-color: darkgrey;
+    color: white;
+    cursor: pointer;
+}
+.cart-box{
+    width: 100%;
+    margin-top: 20px;
+
+}
+.cart-header{
+    text-align: center;
+}
+.cart-table{
+    margin-top: 10px;
+    width: 100%;
+}
+.cart-table table{
+    width: 100%;
+}
+th,td{
+    padding: 8px;
+    text-align: center;
+}
+.submit-print{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+#btnPrint{
+    width: 60%;
+    padding: 8px 16px;
+    border: none;
+    background-color: black;
+    color: white;
+    transition: all ease-in-out 0.2s;
+}
+#btnPrint:hover{
     background-color: darkgrey;
     color: white;
     cursor: pointer;
