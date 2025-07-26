@@ -6,13 +6,51 @@ let btnExpense = document.getElementById('btnExpense');
 let tBodyInc = document.getElementById('tBody-inc');
 let tBodyExp = document.getElementById('tBody-exp');
 
+// Global Variable
+let transactions = {
+    income : [],
+    expense : []
+}
+
 function incomeHandler() {
     // console.log('Income button clicked');
-    alert('Income button clicked');
+    // Input
+    let valueTransactionName = document.getElementById('input-transaction-name').value;
+    let valueBalance = document.getElementById('input-balance').value;
+    let id;
+    if(transactions.income.length === 0) {
+        id = 1;
+    } else {
+        id = transactions.income[transactions.income.length - 1].id + 1;
+    }
+    let tempObj = {
+        id,
+        transaction : valueTransactionName,
+        balance : valueBalance
+    }
+    transactions.income.push(tempObj);
+    alert(`"${valueTransactionName}" dengan saldo ${valueBalance} telah ditambahkan ke daftar pemasukan`);
+    console.log(transactions);
 }
+
 function expenseHandler() {
     // console.log('Expense button clicked');
-    alert('Expense button clicked');
+    let valueTransactionName = document.getElementById('input-transaction-name').value;
+    let valueBalance = document.getElementById('input-balance').value;
+    let id;
+    if(transactions.expense.length === 0) {
+        id = 1;
+    } else {
+        id = transactions.expense[transactions.expense.length - 1].id + 1;
+    }
+    let tempObj = {
+        id,
+        transaction : valueTransactionName,
+        balance : valueBalance
+    }
+    transactions.expense.push(tempObj);
+    alert(`"${valueTransactionName}" dengan saldo ${valueBalance} telah ditambahkan ke daftar pengeluaran`);
+    console.log(transactions);
 }
 
 // Add Event Listener
