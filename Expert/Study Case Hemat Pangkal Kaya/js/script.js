@@ -12,12 +12,14 @@ let transactions = {
     expense : []
 }
 
+// Handle Income Transaction
 function incomeHandler() {
-    // console.log('Income button clicked');
     // Input
     let valueTransactionName = document.getElementById('input-transaction-name').value;
     let valueBalance = document.getElementById('input-balance').value;
     let id;
+
+    // Validation for id income
     if(transactions.income.length === 0) {
         id = 1;
     } else {
@@ -33,11 +35,13 @@ function incomeHandler() {
     console.log(transactions);
 }
 
+// Handle Expense Transaction
 function expenseHandler() {
-    // console.log('Expense button clicked');
     let valueTransactionName = document.getElementById('input-transaction-name').value;
     let valueBalance = document.getElementById('input-balance').value;
     let id;
+    
+    // Validation for id expense
     if(transactions.expense.length === 0) {
         id = 1;
     } else {
