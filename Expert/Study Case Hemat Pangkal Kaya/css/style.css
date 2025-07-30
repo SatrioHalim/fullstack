@@ -94,4 +94,13 @@ body{
 th,td{
     padding: 8px;
 }
-
+.balance-box{
+    width: 100%;
+    text-align: center;
+}
+.balance-box span{
+    font-size: 3rem;
+    color: green;
+    margin-top: 16px;
+    font-weight: 500;
+}
