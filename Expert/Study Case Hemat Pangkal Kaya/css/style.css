@@ -104,12 +104,19 @@ th,td{
     padding: 8px;
 }
 .balance-box{
-    width: 100%;
+    width: 30%;
     text-align: center;
+    margin-top: 30px;
 }
 .balance-box span{
     font-size: 3rem;
     color: green;
     margin-top: 16px;
     font-weight: 500;
+}
+.balance-text p{
+    font-size: 1.3rem;
+    color: black;
+    font-weight: 500;
+    margin-bottom: 8px;
 }
