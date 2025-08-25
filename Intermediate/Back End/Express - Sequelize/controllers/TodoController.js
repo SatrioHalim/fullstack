@@ -14,6 +14,7 @@ class TodoController {
     static addTodo(req,res){
         res.json({
             message: 'Todo item added successfully',
+            status:'success'
         });
     }
 }
