@@ -1,6 +1,7 @@
 const {todo} = require('../models');
 
 class TodoController {
+
     static getTodos(req,res){
         todo.findAll()
         .then(todos => {
@@ -12,10 +13,18 @@ class TodoController {
     }
 
     static addTodo(req,res){
-        res.json({
-            message: 'Todo item added successfully',
-            status:'success'
-        });
+        const {task, status} = req.body;
+
+        todo.create({
+            task, status
+        })
+        .then(result => {
+            res.json(result);
+        })
+        .catch(err => {
+            res.json(err);
+        })
+        
     }
 }
 
