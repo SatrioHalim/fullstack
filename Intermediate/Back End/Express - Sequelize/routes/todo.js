@@ -7,6 +7,7 @@ todoRoute.get('/', TodoController.getTodos);
 // POST METHOD -> create
 todoRoute.post('/add', TodoController.addTodo);
 
+// GET METHOD -> find by id
 todoRoute.get('/find/:id', TodoController.findById);
 
 module.exports = todoRoute;
