@@ -1,3 +1,4 @@
+const { where } = require('sequelize');
 const {todo} = require('../models');
 
 class TodoController {
@@ -51,6 +52,55 @@ class TodoController {
                 res.json(result);
             }
         }).catch(err => {
+            res.json(err);
+        })
+    }
+
+    // delete
+    static deleteTodo(req,res){
+        let id = +req.params.id;
+        todo.destroy({
+            where: {id}
+        })
+        .then(result=>{
+            if(result === 0){
+                res.json({
+                    message : `Todo with id ${id} not found`
+                });
+            } else {
+                res.json({
+                    message : `Todo with id ${id} success to delete`
+                });
+            }
+        })
+        .catch(err=>{
+            res.json(err);
+        })
+    }
+
+    // update
+    static updateTodo(req,res){
+        let id = +req.params.id;
+        const {task, status} = req.body;
+
+        todo.update({
+            task, 
+            status: Boolean(status) // karena status itu boolean jadi harus di convert dulu
+        },{
+            where: {id}
+        })
+        .then(result=>{
+            if(result[0] === 0){
+                res.json({
+                    message : `Todo with id ${id} not found or data is the same`
+                });
+            } else {
+                res.json({
+                    message : `Todo with id ${id} success to update`
+                });
+            }
+        })
+        .catch(err=>{
             res.json(err);
         })
     }
