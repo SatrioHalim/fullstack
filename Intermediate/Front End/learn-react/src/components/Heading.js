@@ -1,7 +1,7 @@
 import React from "react";
 
 function Heading(props){
-    const {name, age} = props;
+    const {name, age} = props.profile;
     
     return (
         <div>

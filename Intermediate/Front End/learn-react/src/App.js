@@ -1,9 +1,11 @@
 import './App.css';
 import Heading from './components/Heading'; 
+import React,{useState} from 'react';
 
 function App() {
 
-  const profile = [
+  // profile sama setProfile disini mirip2 kaya setter getter di oop
+  const [profiles, setProfiles] = useState([
     {
       id: 1,
       name: "Halim",
@@ -17,19 +19,28 @@ function App() {
       id: 3,
       name: "Rizky Galon",
       age: 19
+    },{
+      id: 4,
+      name: "Udin Sedunia",
+      age: 20
+    },{
+      id: 5,
+      name: "Jamal Sopir Angkot",
+      age: 21
     }
-  ]
+  ])
 
   return (
     <div className="App">
+      {/* .map ngembalikan array baru */}
+     
+      {profiles.map(profile => {
 
-      {profile.forEach((item)=>{
-        <Heading name={item.name} age={item.age}></Heading>
+        return(
+          <Heading profile={profile}></Heading>
+        )
       })}
       
-      <Heading name="Halim" age="22"></Heading>
-      <Heading name="Asep Tambal Ban" age="34"></Heading>
-      <Heading name="Rizky Galon" age="19"></Heading>
     </div>
   );
 }
