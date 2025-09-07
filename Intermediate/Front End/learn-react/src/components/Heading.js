@@ -1,10 +1,12 @@
 import React from "react";
 
-function Heading(){
+function Heading(props){
+    const {name, age} = props;
+    
     return (
         <div>
-            <h1>Hello World!</h1>
-            <p>this is paragraph</p>
+            <h1>Welcome, {name}</h1>
+            <p>Age : {age}</p>
             <hr/>
         </div>
     ) 
