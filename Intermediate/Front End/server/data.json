@@ -1,0 +1,18 @@
+{
+    "todos" : [
+        {
+            "id": 1,
+            "task": "Learn JavaScript",
+            "status": false
+        },
+        {
+            "id": 2,
+            "task": "Build a to-do app",
+            "status": true
+        },{
+            "id": 3,
+            "task": "Test the app",
+            "status": false
+        }
+    ] 
+}
