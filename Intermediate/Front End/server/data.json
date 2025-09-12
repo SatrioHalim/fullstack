@@ -1,18 +1,34 @@
 {
-    "todos" : [
-        {
-            "id": 1,
-            "task": "Learn JavaScript",
-            "status": false
-        },
-        {
-            "id": 2,
-            "task": "Build a to-do app",
-            "status": true
-        },{
-            "id": 3,
-            "task": "Test the app",
-            "status": false
-        }
-    ] 
+  "todos": [
+    {
+      "id": 1,
+      "task": "Belajar React",
+      "status": true
+    },
+    {
+      "id": 2,
+      "task": "Belajar Node.js",
+      "status": false
+    },
+    {
+      "id": 3,
+      "task": "Belajar Database",
+      "status": true
+    },
+    {
+      "id": 4,
+      "task": "Belajar Deployment",
+      "status": false
+    },
+    {
+      "id": "4f25",
+      "task": "Explore REST API",
+      "status": false
+    },
+    {
+      "id": "df5a",
+      "task": "tes",
+      "status": false
+    }
+  ]
 }

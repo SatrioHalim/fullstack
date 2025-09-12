@@ -27,15 +27,10 @@ function Table(){
         getTodos();
     },[])
 
-    function statusConverter(status){
-        if(status === false) return "Not Completed";
-        else return "Completed";
-    }
-
     // Atau kalau mau ubah boolean ke string bisa pake JSON.stringify(attribute_name)
     return (
         <div className='app-table'>
-          <table>
+          <table border='1' cellSpacing={0}>
             <thead>
               <tr>
                 <th>Id</th>
@@ -50,7 +45,9 @@ function Table(){
                     <tr>
                       <td>{todo.id}</td>
                       <td>{todo.task}</td>
-                      <td>{statusConverter(todo.status)}</td>
+                      <td>{
+                          todo.status ? "Done" : "In Progress"
+                        }</td>
                     </tr>
                   )
                  }) 
