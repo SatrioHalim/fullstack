@@ -1,0 +1,21 @@
+{
+  "income": [
+    {
+      "id": 1,
+      "name": "Salary",
+      "amount": 5000000
+    },
+    {
+      "name": "First Salary",
+      "amount": 15000000,
+      "id": "ea31"
+    }
+  ],
+  "expense": [
+    {
+      "id": 1,
+      "name": "Rent",
+      "amount": 1500000
+    }
+  ]
+}
