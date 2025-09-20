@@ -7,6 +7,11 @@ const InputForm = () => {
                 <label>Transaction Name :</label>
                 <input type="text"></input>
             </div>
+            <div className="submit-form">
+                <button>Add Income</button>
+                <button>Add Expense</button>
+            </div>
+            
         </div>
     )
 }
