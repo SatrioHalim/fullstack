@@ -3,7 +3,8 @@ import './App.css';
 import { 
   Title, 
   InputForm, 
-  Income
+  Income,
+  Expense
 } from './components/Index';
     
 function App() {
@@ -15,9 +16,11 @@ function App() {
       <div className='transaction-list'>
         <div className='transaction-heading'>
           <h3>Transaction List</h3>
-          <hr />
         </div>
-        <Income />
+        <div className='transactions'>
+          <Income />
+          <Expense />
+        </div>
       </div>
     </div>
   );

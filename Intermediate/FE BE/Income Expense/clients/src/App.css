@@ -51,4 +51,48 @@ body{
 }
 .transaction-heading{
   color: grey;
+  padding-bottom: 8px;
+  border-bottom: 1px solid black;
+}
+.submit-form{
+  width: 100%;
+}
+.submit-form button{
+  width: 50%;
+  padding: 8px 16px;
+  margin-top: 12px;
+}
+.transactions{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.income-list, .expense-list{
+  width: 100%;
+  padding: 16px;
+}
+.income-heading, .expense-heading{
+  margin-bottom: 16px;
+}
+.card-items{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.income-items, .expense-items{
+  width: 100%;
+}
+.item-left{
+  width: 75%;
+  padding: 8px;
+  text-align: left;
+}
+.item-right{
+  width: 25%;
+  padding: 8px;
+}
+.item-right button{
+  padding: 8px 16px;
 }
