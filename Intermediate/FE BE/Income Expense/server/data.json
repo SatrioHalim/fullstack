@@ -1,7 +1,7 @@
 {
   "income": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Salary",
       "amount": 5000000
     },
@@ -9,13 +9,23 @@
       "name": "First Salary",
       "amount": 15000000,
       "id": "ea31"
+    },
+    {
+      "id": "583c",
+      "name": "Jual Parfum",
+      "amount": 100000
     }
   ],
   "expense": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Rent",
       "amount": 1500000
+    },
+    {
+      "id": "77ca",
+      "name": "Jajan Cilung",
+      "amount": 5000
     }
   ]
 }

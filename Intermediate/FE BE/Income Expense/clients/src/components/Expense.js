@@ -1,12 +1,14 @@
 import React,{useState,useEffect} from "react";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 const Expense = () => {
     const [expenses, setExpenses] = useState([]);
+    const URL = "http://localhost:3000";
     const getExpenses = () => {
         axios({
             method: "GET",
-            url: "http://localhost:3000/expense"
+            url: `${URL}/expense`
         })
         .then(expenses => {
             setExpenses(expenses.data);
@@ -14,6 +16,39 @@ const Expense = () => {
         .catch(err => {
             console.log(err);
         })
+    }
+
+    const deleteHandler = (id) => {
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+            }).then((result) => {
+            if (result.isConfirmed) {
+                axios({
+                    method: "DELETE",
+                    url: `${URL}/expense/${id}`
+                })
+                .then(result=>{
+                    console.log(`Deleted successfully ${result.data}`);
+                    getExpenses();
+                    Swal.fire({
+                        title: "Deleted!",
+                        text: "Your expense has been deleted.",
+                        icon: "success"
+                    });
+                })
+                .catch(err=>{
+                    console.log(err);
+                })
+                
+            }
+        });
+        
     }
 
     useEffect(()=>{
@@ -36,7 +71,7 @@ const Expense = () => {
                                     <p>Rp. {expense.amount}</p>
                                 </div>
                                 <div className="item-right">
-                                    <button>Delete</button>
+                                    <button onClick={()=>deleteHandler(expense.id)}>Delete</button>
                                 </div>
                             </div>
                         )

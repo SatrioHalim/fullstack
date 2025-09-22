@@ -1,12 +1,14 @@
-import React,{useState, useEffect, use} from "react";
+import React,{useState, useEffect} from "react";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 const Income = () => {
     const [incomes, setIncomes] = useState([]);
+    const URL = "http://localhost:3000";
     const getIncomes = () => {
         axios({
             method: "GET",
-            url: "http://localhost:3000/income"
+            url: `${URL}/income`
         })
         .then(incomes => {
             setIncomes(incomes.data);
@@ -14,6 +16,39 @@ const Income = () => {
         .catch(err => {
             console.log(err);
         })
+    }
+
+    const deleteHandler = (id) => {
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+            }).then((result) => {
+            if (result.isConfirmed) {
+                axios({
+                    method: "DELETE",
+                    url: `${URL}/income/${id}`
+                })
+                .then(result=>{
+                    console.log(`Deleted successfully ${result.data}`);
+                    getIncomes();
+                    Swal.fire({
+                        title: "Deleted!",
+                        text: "Your income has been deleted.",
+                        icon: "success"
+                    });
+                })
+                .catch(err=>{
+                    console.log(err);
+                })
+                
+            }
+        });
+        
     }
 
     useEffect(()=>{
@@ -36,7 +71,7 @@ const Income = () => {
                                     <p>Rp. {income.amount}</p>
                                 </div>
                                 <div className="item-right">
-                                    <button>Delete</button>
+                                    <button onClick={()=>{deleteHandler(income.id)}}>Delete</button>
                                 </div>
                             </div>
                         )
