@@ -8,7 +8,7 @@ route.get('/',(req,res)=>{
 
 const incomeRoutes = require('./income');
 const expenseRoutes = require('./expense');
-route.get('/incomes',incomeRoutes);
-route.get('/expenses',expenseRoutes);
+route.use('/incomes',incomeRoutes);
+route.use('/expenses',expenseRoutes);
 
 module.exports = route;
